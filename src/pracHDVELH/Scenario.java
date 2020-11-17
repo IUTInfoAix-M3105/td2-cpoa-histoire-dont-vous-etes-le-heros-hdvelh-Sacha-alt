@@ -28,8 +28,8 @@ public class Scenario {
 	public String run() {
 		if (this.getHead() == null)
 		{
-//			this.gui.err(this.MSG_EMPTY_SCENARIO);
-//			Event currentEvent = this.getHead();
+			this.gui.output(this.MSG_EMPTY_SCENARIO);
+			Event currentEvent = this.getHead();
 //			while(!currentEvent.isFinal()) currentEvent = currentEvent.run();
 
 			return this.MSG_FINALE;

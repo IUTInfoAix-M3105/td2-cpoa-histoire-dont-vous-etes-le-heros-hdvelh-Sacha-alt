@@ -65,6 +65,6 @@ public class GUIManager {
 	this.err = err;
 	inputReader = new Scanner(this.in);
   }
-}
+
 
 // eof

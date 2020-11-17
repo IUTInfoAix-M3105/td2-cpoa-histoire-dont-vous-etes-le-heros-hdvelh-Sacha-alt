@@ -15,8 +15,19 @@ public class Scenario {
 	private Event head;
 	private GUIManager gui;
 
-	/* TO BE COMPLETED */
+	public Event getHead() {
+		return this.head;
+	}
 
+	public Scenario (GUIManager gui, Event headEvent) {
+		this.gui = gui;
+		this.head = headEvent;
+	}
+
+
+	public String run() {
+		if (this.getHead() == null) {
+			
 	/* MAIN */
 	public static void main(String[] args) {
 		Scenario scenario;

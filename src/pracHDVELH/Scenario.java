@@ -29,11 +29,13 @@ public class Scenario {
 		if (this.getHead() == null)
 		{
 			this.gui.output(this.MSG_EMPTY_SCENARIO);
-			Event currentEvent = this.getHead();
-//			while(!currentEvent.isFinal()) currentEvent = currentEvent.run();
+
+
 
 			return this.MSG_FINALE;
 		}
+		Event currentEvent = this.getHead();
+		return currentEvent.run();
 	}
 }
 

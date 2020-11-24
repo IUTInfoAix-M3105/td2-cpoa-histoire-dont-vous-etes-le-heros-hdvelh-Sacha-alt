@@ -23,11 +23,12 @@ public class NodeMultiple {
 	}
 
 	/* Getters/Setters */
+
 	/**
 	 * Gets the {@code i}th daughter node.
-	 * 
+	 * <p>
 	 * Aborts if the given index {@code i} is out of range.
-	 * 
+	 *
 	 * @param i the index of the daughter node.
 	 * @return the {@code i}th daughter node, or {@code null} if it does not exist.
 	 */
@@ -40,12 +41,12 @@ public class NodeMultiple {
 	 * Should be used cautiously, since {@code i} may not be the first index
 	 * available (i.e. there may be lower indexes which do not refer to any
 	 * daughter).
-	 * 
+	 * <p>
 	 * If a daughter node is already referred to at this index then it is erased
 	 * with {@code daughter}.
-	 * 
+	 * <p>
 	 * Aborts if the index {@code i} is out of range.
-	 * 
+	 *
 	 * @param daughter the node to be linked as a daughter of {@code this} node.
 	 * @param i        the daughter node's index
 	 */
@@ -69,15 +70,16 @@ public class NodeMultiple {
 
 	/**
 	 * Adds the given {@code daughter} node at the first available index.
-	 * 
+	 * <p>
 	 * If the max number of daughters ({@link #NODE_MAX_ARITY}) is already reached
 	 * nothing happens (no abort).
-	 * 
+	 *
 	 * @param daughter
 	 */
 	public void addDaughter(NodeMultiple daughter) {
 		/* TO BE COMPLETED */
 	}
+
 
 	/**
 	 * @return the content data
@@ -95,13 +97,14 @@ public class NodeMultiple {
 
 	/**
 	 * @return {@code true} if and only if this node has at least one non-null
-	 *         daughter node.
+	 * daughter node.
 	 */
 	public boolean hasDaughters() {
 		/* TO BE COMPLETED */
 	}
 
 	/* Constructors */
+
 	/**
 	 * Default constructor.
 	 */
@@ -112,11 +115,12 @@ public class NodeMultiple {
 	/**
 	 * Constructor. Sets the content data to {@code data} and creates an empty set
 	 * of daughters.
-	 * 
+	 *
 	 * @param data
 	 */
 	public NodeMultiple(Object data) {
 		/* TO BE COMPLETED */
+	}
 }
 
 // eof

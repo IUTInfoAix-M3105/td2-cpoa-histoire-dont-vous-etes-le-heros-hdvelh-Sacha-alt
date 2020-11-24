@@ -18,8 +18,29 @@ public class Event extends NodeMultiple {
 	public static final String PROMPT_ANSWER = "Answer: ";
 	public static final String WARNING_MSG_INTEGER_EXPECTED = "Please input a integer within range!";
 //
+	private String texte;
+	private GUIManager interf;
 	public Event (GUIManager gui,String texte) {
+		this.texte = texte;
+		this.interf = gui;
+	}
+	public String run (){
+		if (!this.hasDaughters()){
+			// renvoie la fin
+			return this.getData();
+		}
+		else {
+			//affiche l'évènnement courant
+//			System.out.println(this.texte);
+			interf.outputln(this.texte);
+			//demande le choix a l'utilisateur
+			Scanner scan = interf.getInputReader();
+			int a;
+			a = scan.nextInt();
+			//sélèctionne l'évènnement choisi
 
+			//exécution de l'évènnement choisi (fonction run)
+		}
 	}
 //	/**
 //	 * @return the playerAnswer
@@ -68,17 +89,17 @@ public class Event extends NodeMultiple {
 //	/**
 //	 * @see pracHDVELH.NodeMultiple#getData()
 //	 */
-//	public String getData() {
-//		/* TO BE COMPLETED */
-//	}
+	public String getData() {
+		return this.texte;
+	}
 //
 //	/**
 //	 * @see pracHDVELH.NodeMultiple#setData(Object)
 //	 * @param data
 //	 */
-//	public void setData(String data) {
-//		/* TO BE COMPLETED */
-//	}
+	public void setData(String data) {
+		/* TO BE COMPLETED */
+	}
 //
 //	/**
 //	 * @see pracHDVELH.NodeMultiple#getDaughter(int)
